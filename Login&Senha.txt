@@ -1,0 +1,6 @@
+adm
+123
+GETI
+func
+1234
+CPS
