@@ -4,12 +4,14 @@ package conrollerCandidato;
 import java.util.Scanner;
 
 public class HashTableLinear {
-	public void HashTable(int n) {
+	public void HashTable() {
+		AleatorioController a = new AleatorioController();
+		
 		HashLinear tab = new HashLinear(10);
 		int NumeroInscrissao;
 
 		for (int i = 0; i < 10; i++) {
-			NumeroInscrissao = n; //numero aleatorio
+			NumeroInscrissao = a.aleatorio(); //numero aleatorio
 			tab.insere(NumeroInscrissao);// � o vetor da estrutura da hash
 		}
 		System.out.print("\n\nImprimindo conteudo");

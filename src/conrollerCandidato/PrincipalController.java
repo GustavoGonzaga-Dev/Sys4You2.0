@@ -7,11 +7,11 @@ public class PrincipalController {
 		AleatorioController a = new AleatorioController();
 		HashTableLinear h = new HashTableLinear();
 		int NumeroInscrissao;
-		for(int i =0; i<10; i++) {
-			NumeroInscrissao = a.aleatorio();
-			h.HashTable(NumeroInscrissao);
+		
+			//NumeroInscrissao = a.aleatorio();
+			h.HashTable();
 			
-		}
+		
 		
 	}
 
