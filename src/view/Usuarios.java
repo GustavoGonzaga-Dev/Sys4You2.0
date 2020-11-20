@@ -1,15 +1,9 @@
 package view;
 
 import java.io.IOException;
-
 import javax.swing.JOptionPane;
-
 import controller.PilhaDinamica;
 import controller.ControllerTXT;
-
-
-
-
 
 public class Usuarios {
 
@@ -22,7 +16,6 @@ public class Usuarios {
 		String senha;
 		String perm;
 		int esc = 0;
-		int i=0;
 		while(esc!=9) {
 			esc = Integer.parseInt(JOptionPane.showInputDialog("Menu usuarios:\n"
 					+ "1- Adicionar \n"

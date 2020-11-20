@@ -6,7 +6,7 @@ public class AleatorioController {
 	public int aleatorio() {
 		Random r = new Random();
 		int n;
-		n = r.nextInt(20) + 1;
+		n = r.nextInt(500) + 1;
 		return n;
 	}
 }
