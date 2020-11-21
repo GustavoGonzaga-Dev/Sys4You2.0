@@ -3,16 +3,18 @@ package conrollerCandidato;
 import java.io.IOException;
 
 public class HashLinear {
-	
+
 	private Hash[] tab;
 	private int TAM_MAX;
-	private int[] vet = new int[10];
+	private int[] vet = new int[5];
 	private int NumeroInscrissao;
 	private int j = 0;
+	String cheio;
 	AleatorioController a = new AleatorioController();
 	BancoCandidato Banco = new BancoCandidato();
+	StringBuffer buffer1 = new StringBuffer();
 
-	public HashLinear(int tam) {
+	public HashLinear(int tam) throws IOException {
 		tab = new Hash[tam];
 		TAM_MAX = tam;
 		for(int i=0; i<tam; i++) {
@@ -25,10 +27,10 @@ public class HashLinear {
 		return Posicao;
 	}
 
-	public void insere() throws IOException {
+	public void insere(StringBuffer buffer2) throws IOException {
 		NumeroInscrissao = a.aleatorio();
 		for(int i =0; i<vet.length; i++) {
-			if(NumeroInscrissao == vet[i]) {
+			if(NumeroInscrissao == vet[i] || buffer2.equals(NumeroInscrissao)) {
 				System.out.println("REPETIU A MERDA");
 				NumeroInscrissao = a.aleatorio();
 			}
@@ -52,13 +54,21 @@ public class HashLinear {
 		Banco.GravarTXTcandidato(NumeroInscrissao);
 		System.out.print("-> Inserido HASH[" + pos + "] Numero da inscrição: (" +NumeroInscrissao+ ") \n");
 		vet[j] = NumeroInscrissao;
+		buffer1.append(vet[j] + "\n");
 		j++;
+		
+		
 	}
 
-	public void imprime() {
-		for (int i=0; i<TAM_MAX; i++)
-			if ( tab[i].ocupado==true )
+	public void imprime(StringBuffer buffer3) throws IOException {
+		for (int i=0; i<TAM_MAX; i++) {
+			if ( tab[i].ocupado==true ) {
 				System.out.print("\nHash[" + i + "] = " + tab[i].NumeroInscrissao);
+			}
+		}
+		buffer3.append(buffer1);
+		cheio = buffer3.toString();
+		Banco.GravarTXTnumInscrissao(cheio);
 	}
 
 	public boolean cheia() {

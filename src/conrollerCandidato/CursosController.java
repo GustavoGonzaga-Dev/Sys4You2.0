@@ -11,7 +11,7 @@ public class CursosController {
 		VetCursos[0] = "Informatica";
 		VetCursos[1] = "Logistica";
 		VetCursos[2] = "Gestão";
-		for(int i = 0; i<10; i++) 
+		for(int i = 0; i<5; i++) 
 			n = randomCurso();
 			switch (n) {
 			case 0:
