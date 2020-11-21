@@ -40,7 +40,6 @@ public class MenuController {
 			JOptionPane.showMessageDialog(null, "Valor invalido");
 			break;
 		}
-		voltar.ViewMenu(permissao);
 	}
 
 	public void menuSwitch2(int escolha, String permissao) throws IOException {

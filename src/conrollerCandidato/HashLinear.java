@@ -27,10 +27,12 @@ public class HashLinear {
 		return Posicao;
 	}
 
-	public void insere(StringBuffer buffer2) throws IOException {
+	public void insere(String[] vetor) throws IOException {
 		NumeroInscrissao = a.aleatorio();
+		String NumeroInscrissaoB;
+		NumeroInscrissaoB = Integer.toString(NumeroInscrissao);
 		for(int i =0; i<vet.length; i++) {
-			if(NumeroInscrissao == vet[i] || buffer2.equals(NumeroInscrissao)) {
+			if(NumeroInscrissao == vet[i] || NumeroInscrissaoB.contentEquals(vetor[i])) {
 				System.out.println("REPETIU A MERDA");
 				NumeroInscrissao = a.aleatorio();
 			}

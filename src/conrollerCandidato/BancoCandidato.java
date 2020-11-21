@@ -30,15 +30,16 @@ public class BancoCandidato {
 		Arq.close();
 	}
 	
-	public StringBuffer LerNumInscrissao(StringBuffer buffer2) throws IOException {
+	public String[] LerNumInscrissao(String[] vetor) throws IOException {
 		BufferedReader ler = new BufferedReader(new FileReader("NumerosDeInscrissao.txt"));
 		String line =ler.readLine();
-		while(line!=null) {
-			buffer2.append(line + "\n");
+		for(int i= 0; line!=null; i++) {
+			vetor[i] = line;
+			//buffer2.append(line + "\n");
 			line = ler.readLine();
 		}
 		ler.close();
-		return buffer2;
+		return vetor;
 	}
 	
 	public StringBuffer LerTXTcandidato(int NumeroConsulta, StringBuffer bufferLer) throws IOException {
