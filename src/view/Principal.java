@@ -15,7 +15,7 @@ public class Principal {
 		esc = Integer.parseInt(JOptionPane.showInputDialog("Bem vindo sua delicia :3\n"
 				+ "1- Secretaria \n"
 				+ "2- Candidatos \n"
-				+ "3- Sair \n"));
+				+ "0- Sair \n"));
 		
 		switch(esc) {
 		case 1:

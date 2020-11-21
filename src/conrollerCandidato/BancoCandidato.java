@@ -9,7 +9,9 @@ import java.io.PrintWriter;
 public class BancoCandidato {
 	String NomeArq;
 	String NomeCurso;
+	String NomeCandidato;
 	CursosController curso = new CursosController();
+
 	
 	public void GravarTXTcandidato(int NumeroInscrissao) throws IOException {
 		NomeArq = Integer.toString(NumeroInscrissao);
