@@ -11,14 +11,15 @@ public class BancoCandidato {
 	String NomeCurso;
 	String NomeCandidato;
 	CursosController curso = new CursosController();
-
+	GeraNomeController geraNome = new GeraNomeController();
 	
 	public void GravarTXTcandidato(int NumeroInscrissao) throws IOException {
 		NomeArq = Integer.toString(NumeroInscrissao);
 		NomeCurso = curso.Cursos(NomeCurso);
+		NomeCandidato = geraNome.Inicio(NomeCandidato);
 		FileWriter Arq = new FileWriter(NomeArq + ".txt");
 		PrintWriter GravArq = new PrintWriter(Arq);
-		GravArq.printf("Candidato \n" + NomeCurso);
+		GravArq.printf(NomeCandidato +"\n" + NomeCurso);
 		Arq.close();
 	}
 	
