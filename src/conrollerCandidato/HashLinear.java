@@ -1,5 +1,7 @@
 package conrollerCandidato;
 
+import java.io.IOException;
+
 public class HashLinear {
 	
 	private Hash[] tab;
@@ -8,6 +10,7 @@ public class HashLinear {
 	private int NumeroInscrissao;
 	private int j = 0;
 	AleatorioController a = new AleatorioController();
+	BancoCandidato Banco = new BancoCandidato();
 
 	public HashLinear(int tam) {
 		tab = new Hash[tam];
@@ -22,7 +25,7 @@ public class HashLinear {
 		return Posicao;
 	}
 
-	public void insere() {
+	public void insere() throws IOException {
 		NumeroInscrissao = a.aleatorio();
 		for(int i =0; i<vet.length; i++) {
 			if(NumeroInscrissao == vet[i]) {
@@ -44,8 +47,9 @@ public class HashLinear {
 					break;
 			}
 		}
-		tab[pos].NumeroInscrissao=NumeroInscrissao;
+		tab[pos].NumeroInscrissao = NumeroInscrissao;
 		tab[pos].ocupado = true;
+		Banco.GravarTXTcandidato(NumeroInscrissao);
 		System.out.print("-> Inserido HASH[" + pos + "] Numero da inscrição: (" +NumeroInscrissao+ ") \n");
 		vet[j] = NumeroInscrissao;
 		j++;
