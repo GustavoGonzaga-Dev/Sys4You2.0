@@ -40,4 +40,16 @@ public class BancoCandidato {
 		ler.close();
 		return buffer2;
 	}
+	
+	public StringBuffer LerTXTcandidato(int NumeroConsulta, StringBuffer bufferLer) throws IOException {
+		NomeArq = Integer.toString(NumeroConsulta);
+		BufferedReader ler = new BufferedReader(new FileReader(NomeArq+".txt"));
+		String line =ler.readLine();
+		while(line!=null) {
+			bufferLer.append(line + "\n");
+			line = ler.readLine();
+		}
+		ler.close();
+		return bufferLer;
+	}
 }

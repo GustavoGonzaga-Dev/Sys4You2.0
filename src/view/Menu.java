@@ -18,6 +18,7 @@ public class Menu {
 					+ "1- lista de permissões \n"
 					+ "2- lista de usuarios \n"
 					+ "3- consultar editais \n"
+					+ "4- lista de candidatos \n"
 					+ "9- Sair \n"));
 			controlMenu.menuSwitch1(escolha, permissao);
 			break;
