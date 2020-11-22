@@ -8,7 +8,7 @@ public class HashTableLinear {
 		HashLinear tab = new HashLinear(5);
 		BancoCandidato Banco = new BancoCandidato();
 		//StringBuffer buffer2 = new StringBuffer();
-		String[] Vetor = new String[6];
+		String[] Vetor = new String[12];
 		Banco.LerNumInscrissao(Vetor);
 		StringBuffer buffer3 = new StringBuffer();
 		for(int i =0; i< Vetor.length; i++) {

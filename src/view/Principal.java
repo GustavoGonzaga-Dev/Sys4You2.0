@@ -11,7 +11,8 @@ public class Principal {
 	public static void main(String[] args) throws IOException { //o sistema começa aqui :3
 		PrincipalController a = new PrincipalController();
 		Login log = new Login();
-		int esc;
+		log.viewLogin();
+		/*int esc;
 		esc = Integer.parseInt(JOptionPane.showInputDialog("Bem vindo sua delicia :3\n"
 				+ "1- Secretaria \n"
 				+ "2- Candidatos \n"
@@ -30,7 +31,7 @@ public class Principal {
 		default:
 			JOptionPane.showMessageDialog(null, "Valor Invalido!!!");	
 			break;
-		}
+		}*/
 	}
 
 }

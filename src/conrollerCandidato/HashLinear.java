@@ -33,7 +33,7 @@ public class HashLinear {
 		NumeroInscrissaoB = Integer.toString(NumeroInscrissao);
 		for(int i =0; i<vet.length; i++) {
 			if(NumeroInscrissao == vet[i] || NumeroInscrissaoB.contentEquals(vetor[i])) {
-				System.out.println("REPETIU A MERDA");
+			System.out.println("REPETIU A MERDA");
 				NumeroInscrissao = a.aleatorio();
 			}
 		}
@@ -68,6 +68,7 @@ public class HashLinear {
 				System.out.print("\nHash[" + i + "] = " + tab[i].NumeroInscrissao);
 			}
 		}
+		
 		buffer3.append(buffer1);
 		cheio = buffer3.toString();
 		Banco.GravarTXTnumInscrissao(cheio);

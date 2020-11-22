@@ -12,7 +12,7 @@ public class ConsultaCandidatoController {
 	public StringBuffer buffer2 = new StringBuffer();
 
 	public void Consulta() throws IOException {
-		String[] Vetor = new String[6];
+		String[] Vetor = new String[12];
 		LerCand.LerNumInscrissao(Vetor);
 		for(int g = 0; g< Vetor.length; g++) {
 			System.out.println(Vetor[g]);
