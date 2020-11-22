@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import conrollerCandidato.PrincipalController;
 
 public class Principal {
-
+	//DEV Delicia
 	public static void main(String[] args) throws IOException { //o sistema começa aqui :3
 		PrincipalController a = new PrincipalController();
 		Login log = new Login();
