@@ -4,15 +4,19 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
+import view.ListaCandidatos;
+
 public class ConsultaCandidatoController {
 	private BancoCandidato LerCand = new BancoCandidato();
 	public StringBuffer bufferLer = new StringBuffer();
 	public int NumeroConsulta;
 	public String NumConsulta;
 	public StringBuffer buffer2 = new StringBuffer();
-
-	public void Consulta() throws IOException {
+	public ListaCandidatos lista = new ListaCandidatos();
+	
+	public void Consulta(String permissao) throws IOException {
 		String[] Vetor = new String[12];
+					
 		LerCand.LerNumInscrissao(Vetor);
 		for(int g = 0; g< Vetor.length; g++) {
 			System.out.println(Vetor[g]);
@@ -30,8 +34,9 @@ public class ConsultaCandidatoController {
 				}
 			}
 		}while(Valido != true);
+		lista.MenuListaCandidato(permissao);
 	}
-
+	
 	public StringBuffer LerCandidato() throws IOException {
 		LerCand.LerTXTcandidato(NumeroConsulta, bufferLer);
 		return null;

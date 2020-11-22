@@ -21,7 +21,8 @@ public class ListaCandidatos {
 			
 			break;
 		case 2:
-			Consulta.Consulta();
+			Consulta.Consulta(permissao);
+			
 			break;
 		case 9:
 			JOptionPane.showMessageDialog(null, "Voltanto...");
