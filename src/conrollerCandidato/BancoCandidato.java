@@ -54,15 +54,14 @@ public class BancoCandidato {
 		return bufferLer;
 	}
 
-	public StringBuffer LerTXTallCandidatos(String[] vetor, StringBuffer bufferLer, int i) throws IOException {
+	public String[] LerTXTallCandidatos(String[] vetor, String[] nome, int i) throws IOException {
 			NomeArq = vetor[i];
 			BufferedReader ler = new BufferedReader(new FileReader(NomeArq+".txt"));
 			String line =ler.readLine();
-			while(line!=null) {
-				bufferLer.append(line + " ");
+				nome[i] =  line + "    |*| ";
 				line = ler.readLine();
-			}
+				nome[i] += " |*|    " + line + "       |*| |*|               ";
 			ler.close();
-		return bufferLer;
+		return nome;
 	}
 }
