@@ -12,7 +12,7 @@ public class BancoCandidato {
 	String NomeCandidato;
 	CursosController curso = new CursosController();
 	GeraNomeController geraNome = new GeraNomeController();
-	
+
 	public void GravarTXTcandidato(int NumeroInscrissao) throws IOException {
 		NomeArq = Integer.toString(NumeroInscrissao);
 		NomeCurso = curso.Cursos(NomeCurso);
@@ -22,14 +22,14 @@ public class BancoCandidato {
 		GravArq.printf(NomeCandidato +"\n" + NomeCurso);
 		Arq.close();
 	}
-	
+
 	public void GravarTXTnumInscrissao(String cheio ) throws IOException {
 		FileWriter Arq = new FileWriter("NumerosDeInscrissao.txt");
 		PrintWriter GravArq = new PrintWriter(Arq);
 		GravArq.printf(cheio + "\n");
 		Arq.close();
 	}
-	
+
 	public String[] LerNumInscrissao(String[] vetor) throws IOException {
 		BufferedReader ler = new BufferedReader(new FileReader("NumerosDeInscrissao.txt"));
 		String line =ler.readLine();
@@ -41,7 +41,7 @@ public class BancoCandidato {
 		ler.close();
 		return vetor;
 	}
-	
+
 	public StringBuffer LerTXTcandidato(int NumeroConsulta, StringBuffer bufferLer) throws IOException {
 		NomeArq = Integer.toString(NumeroConsulta);
 		BufferedReader ler = new BufferedReader(new FileReader(NomeArq+".txt"));
@@ -51,6 +51,18 @@ public class BancoCandidato {
 			line = ler.readLine();
 		}
 		ler.close();
+		return bufferLer;
+	}
+
+	public StringBuffer LerTXTallCandidatos(String[] vetor, StringBuffer bufferLer, int i) throws IOException {
+			NomeArq = vetor[i];
+			BufferedReader ler = new BufferedReader(new FileReader(NomeArq+".txt"));
+			String line =ler.readLine();
+			while(line!=null) {
+				bufferLer.append(line + " ");
+				line = ler.readLine();
+			}
+			ler.close();
 		return bufferLer;
 	}
 }

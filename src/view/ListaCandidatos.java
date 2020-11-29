@@ -11,7 +11,7 @@ public class ListaCandidatos {
 	public void MenuListaCandidato(String permissao) throws IOException {
 		Menu voltar = new Menu();
 		ConsultaCandidatoController Consulta = new ConsultaCandidatoController();
-
+		VisualizarCandidatos VisuCand = new VisualizarCandidatos();
 		int esc;
 		esc = Integer.parseInt(JOptionPane.showInputDialog("Menu Candidato: \n" 
 		+ "1- Exibir lista de candidatos \n"
@@ -20,7 +20,7 @@ public class ListaCandidatos {
 
 		switch (esc) {
 		case 1:
-			VisualizarCandidatos.MenuLC();
+			VisuCand.MenuLC(permissao);
 			break;
 		case 2:
 			Consulta.Consulta(permissao);
@@ -34,5 +34,4 @@ public class ListaCandidatos {
 			break;
 		}
 	}
-
 }
