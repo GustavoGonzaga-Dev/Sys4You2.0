@@ -2,10 +2,10 @@ package conrollerCandidato;
 
 import java.io.IOException;
 
-public class HashTableLinear {
+public class HTL {
 	
 	public void HashTable() throws IOException {
-		HashLinear tab = new HashLinear(5);
+		HL tab = new HL(5);
 		BancoCandidato Banco = new BancoCandidato();
 		//StringBuffer buffer2 = new StringBuffer();
 		String[] Vetor = new String[12];

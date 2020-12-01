@@ -5,7 +5,7 @@ import java.io.IOException;
 public class PrincipalController {
 	
 	public void PrincipalC() throws IOException {
-		HashTableLinear h = new HashTableLinear();
+		HTL h = new HTL();
 		h.HashTable();	
 	}
 }

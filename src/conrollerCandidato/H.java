@@ -1,10 +1,10 @@
 package conrollerCandidato;
 
-public class Hash {
+public class H {
 	  public int NumeroInscrissao;
 	  public boolean ocupado;
 	  
-	  public Hash(boolean b) {
+	  public H(boolean b) {
 	    ocupado = false;
 	  }
 }

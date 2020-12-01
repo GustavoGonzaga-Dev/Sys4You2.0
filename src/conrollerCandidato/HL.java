@@ -2,9 +2,9 @@ package conrollerCandidato;
 
 import java.io.IOException;
 
-public class HashLinear {
+public class HL {
 
-	private Hash[] tab;
+	private H[] tab;
 	private int TAM_MAX;
 	private int[] vet = new int[5];
 	private int NumeroInscrissao;
@@ -14,11 +14,11 @@ public class HashLinear {
 	BancoCandidato Banco = new BancoCandidato();
 	StringBuffer buffer1 = new StringBuffer();
 
-	public HashLinear(int tam) throws IOException {
-		tab = new Hash[tam];
+	public HL(int tam) throws IOException {
+		tab = new H[tam];
 		TAM_MAX = tam;
 		for(int i=0; i<tam; i++) {
-			tab[i] = new Hash(false);
+			tab[i] = new H(false);
 		}
 	}
 
