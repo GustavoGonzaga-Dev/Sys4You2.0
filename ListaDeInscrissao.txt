@@ -1,0 +1,13 @@
+    *NOME*        |*| |*|      *CURSO*     |*| |*|   *NUMERO DE INSCRI��O* 
+ ===================================================== 
+ BARO BONO    |*|  |*|    Gestão       |*| |*|               194
+FOMI VAVY    |*|  |*|    Gestão       |*| |*|               402
+NOXE QUSA    |*|  |*|    Logistica       |*| |*|               317
+QYGU TIMO    |*|  |*|    Logistica       |*| |*|               165
+RITA LYNU    |*|  |*|    Logistica       |*| |*|               235
+UZYJI SYHE    |*|  |*|    Logistica       |*| |*|               92
+VACA FIHI    |*|  |*|    Logistica       |*| |*|               453
+VUDE SADE    |*|  |*|    Logistica       |*| |*|               293
+VYHA OXONY    |*|  |*|    Informatica       |*| |*|               227
+YXENU POFE    |*|  |*|    Logistica       |*| |*|               86
+
