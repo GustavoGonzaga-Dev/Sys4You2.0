@@ -11,6 +11,7 @@ class Heap {
 	static String[] heap = new String[10];
 	public static StringBuffer bufferApresenta = new StringBuffer();
 	public static ListaCandidatos lista = new ListaCandidatos();
+	public static BancoCandidato BC = new BancoCandidato();
 	
 	static void heapForm(String k) {
 		x++;
@@ -77,6 +78,7 @@ class Heap {
 		bufferApresenta.append("    *NOME*        |*| |*|      *CURSO*     |*| |*|   *NUMERO DE INSCRI��O* \n ===================================================== \n ");
 		sort(nome, n);
 		JOptionPane.showMessageDialog(null, bufferApresenta);
+		BC.GravarTXTlistaInscrissao(bufferApresenta);
 		lista.MenuListaCandidato(permissao);
 	}
 }

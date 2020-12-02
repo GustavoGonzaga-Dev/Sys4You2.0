@@ -64,4 +64,11 @@ public class BancoCandidato {
 			ler.close();
 		return nome;
 	}
+	
+	public void GravarTXTlistaInscrissao(StringBuffer bufferApresenta ) throws IOException {
+		FileWriter Arq = new FileWriter("ListaDeInscrissao.txt");
+		PrintWriter GravArq = new PrintWriter(Arq);
+		GravArq.printf(bufferApresenta + "\n");
+		Arq.close();
+	}
 }
