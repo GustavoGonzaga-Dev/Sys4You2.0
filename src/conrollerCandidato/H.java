@@ -1,6 +1,6 @@
 package conrollerCandidato;
 
-public class H {
+public class H {	//Hash
 	  public int NumeroInscrissao;
 	  public boolean ocupado;
 	  

@@ -2,7 +2,7 @@ package conrollerCandidato;
 
 import java.io.IOException;
 
-public class HL {
+public class HL {	//Hash Linear
 
 	private H[] tab;
 	private int TAM_MAX;

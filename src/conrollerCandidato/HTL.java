@@ -2,7 +2,7 @@ package conrollerCandidato;
 
 import java.io.IOException;
 
-public class HTL {
+public class HTL {	//Hash Table Linear
 	
 	public void HashTable() throws IOException {
 		HL tab = new HL(5);

@@ -12,19 +12,14 @@ public class VisualizarCandidatos {
 	public StringBuffer bufferApresenta = new StringBuffer();
 	public String [] nome = new String [10];
 	public ListaCandidatos lista = new ListaCandidatos();
-	
-	
+	public Heap hp = new Heap();
+
 	public void MenuLC(String permissao) throws IOException {
-		bufferApresenta.append("    *NOME*        |*| |*|      *CURSO*     |*| |*|   *NUMERO DE INSCRIÇÃO* \n ===================================================== \n ");
 		LerCandidato();
-		ordenaArray(nome);
-		for(int i = 0; i < nome.length; i++) {
-		bufferApresenta.append(nome[i] + "\n");
-		}
-		mostra(permissao);
+		int n = nome.length;
+		Heap.inicio(nome, n, permissao);
 	}
-	
-	
+
 	public String[] LerCandidato() throws IOException {
 		LerCand.LerNumInscrissao(Vetor);
 		for(int i = 0; i<Vetor.length; i++) {
@@ -33,44 +28,4 @@ public class VisualizarCandidatos {
 		}
 		return nome;
 	}
-	
-	public void mostra(String permissao) throws IOException {
-		JOptionPane.showMessageDialog(null, bufferApresenta);
-		lista.MenuListaCandidato(permissao);
-	}
-	
-	public static String[] ordenaArray(String[] arrayNomes){
-		
-		String aux = "";
-		
-		for (int i = 0; i < arrayNomes.length; i++) {
-			
-			for (int j = 0; j < arrayNomes.length; j++) {
-				String nome1 = arrayNomes[i];
-				String nome2 = arrayNomes[j];
-				
-
-				if(nome2.charAt(0) > nome1.charAt(0)){
-					
-					aux = nome1; 
-					arrayNomes[i] = nome2;
-					arrayNomes[j] = aux;
-				
-				
-				}else if(nome2.charAt(0) == nome1.charAt(0)){
-				
-					if(nome2.charAt(1) > nome1.charAt(1)){
-						aux = nome1;
-						arrayNomes[i] = nome2;
-						arrayNomes[j] = aux;
-					}	
-					
-				}
-			}
-	
-		}
-
-		return arrayNomes;
-	}
-	
 }
