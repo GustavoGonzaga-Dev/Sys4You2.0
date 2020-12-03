@@ -21,9 +21,7 @@ public class ConsultaCandidatoController {
 		boolean Valido = false;
 		do {
 			NumeroConsulta = Integer.parseInt(JOptionPane.showInputDialog("Insira o numero de inscrição do candidato que deseja consultar:"));
-			//NumConsulta = Integer.toString(NumeroConsulta);
 			for (int i = 0; i < vetor2.length; i++) {
-				//if (NumConsulta.contentEquals(Vetor[i])) {
 				if(NumeroConsulta == vetor2[i]) {
 					System.out.println("Carregando...");
 					LerCandidato();

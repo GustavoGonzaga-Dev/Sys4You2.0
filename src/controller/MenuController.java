@@ -27,9 +27,6 @@ public class MenuController {
 		case 2:
 			Us.ViewUsuarios(permissao);
 			break;
-		case 3:
-
-			break;
 		case 4:
 			ListCand.MenuListaCandidato(permissao);
 			break;
@@ -45,10 +42,7 @@ public class MenuController {
 	public void menuSwitch2(int escolha, String permissao) throws IOException {
 		switch (escolha) {
 		case 1:
-
-			break;
-		case 2:
-
+			ListCand.MenuListaCandidato(permissao);
 			break;
 		case 9:
 			JOptionPane.showMessageDialog(null, "Muito obrigado por ultilizar o Sys4You");
@@ -63,7 +57,7 @@ public class MenuController {
 	public void menuSwitch3(int escolha, String permissao) throws IOException {
 		switch (escolha) {
 		case 1:
-
+			ListCand.MenuListaCandidato(permissao);
 			break;
 		case 9:
 			JOptionPane.showMessageDialog(null, "Muito obrigado por ultilizar o Sys4You");
